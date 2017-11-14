@@ -1,4 +1,4 @@
-npm intall
+npm install
 
 npm start
 
