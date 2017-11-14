@@ -11,6 +11,7 @@ app.set('views', __dirname);
 app.set('view engine', 'html');
 
 app.use(express.static(path.join(__dirname, 'node_modules')));
+app.use(express.static(path.join(__dirname, 'app')));
 
 router.get('/', (req, res, next) => res.render('index'));
 app.use('/', router);
