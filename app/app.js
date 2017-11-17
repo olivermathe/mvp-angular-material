@@ -26,7 +26,7 @@
 
         (function init() {
 
-            $scope.message = "Oh Yeah! It's working!";
+            $scope.message = "Oh Yeah! It's!";
             $scope.list = [];
             $scope.tic = true;
 
@@ -39,6 +39,16 @@
     appController.$inject = ['$scope'];
 
     angular.module('app', ['ngMaterial','ngAnimate'])
-        .controller('appCtrl', appController);
+        .controller('appCtrl', appController)
+        .config(function($mdThemingProvider) {
+            //disable theme generation
+            
+            //themes are still defined in config, but the css is not generated
+            $mdThemingProvider.theme('default')
+                .primaryPalette('blue-grey')
+                .accentPalette('amber')
+                .warnPalette('red')
+                .backgroundPalette('grey');
+        });
 
 })();

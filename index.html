@@ -12,23 +12,51 @@
 <body ng-app="app" ng-cloak>
 
     <div ng-controller="appCtrl" ng-cloak>
-        
-        <md-content>
-            <md-toolbar>
-                <div md-colors="{'background-color':'teal'}" class="md-toolbar-tools">
-                    <h2 flex md-truncate>{{message}}</h2>
-                    <md-button class="md-raised" ng-click="click(tic)">
-                        click
-                    </md-button>
+        <md-content flex>
+            <md-toolbar style="position: fixed">
+                <div class="md-toolbar-tools">
+                    <h1>Hello Word</h1>   
                 </div>
             </md-toolbar>
-        </md-content>
 
-        <ul>
-            <li ng-repeat="item in list track by $index">
-                {{item}}
-            </li>
-        </ul>
+            <md-fab-speed-dial md-direction="down" class="md-scale md-fab-top-right" style="position: fixed" ng-mouseenter="demo.isOpen=true" ng-mouseleave="demo.isOpen=false">
+                <md-fab-trigger>
+                    <md-button aria-label="menu" class="md-fab md-accent">
+                        <md-icon md-svg-src="icons/menu_black_24px.svg" aria-label="menu"></md-icon>
+                    </md-button>
+                </md-fab-trigger>
+
+                <md-fab-actions>
+                    <md-button class="md-fab md-mini">
+                        <md-icon md-svg-src="icons/more_vert_black_24px.svg"></md-icon>
+                    </md-button>
+                    <md-button class="md-fab md-mini">
+                        <md-icon md-svg-src="icons/subject_black_24px.svg"></md-icon>
+                    </md-button>
+                    <md-button class="md-fab md-mini">
+                        <md-icon md-svg-src="icons/favorite_black_24px.svg"></md-icon>
+                    </md-button>
+                </md-fab-actions>
+            </md-fab-speed-dial>
+
+            <md-content class="md-padding" layout-fill layout-wrap layout="row" layout-align="center" style="margin-top: 50px">
+                    <md-card ng-repeat="c in [1,1,1,1,1,1,1,1,1,1] track by $index" >
+                        <md-card-title>
+                            <md-card-title-text>
+                                <span class="md-headline">Card with image</span>
+                                <span class="md-subhead">Large</span>
+                            </md-card-title-text>
+                            <md-card-title-media>
+                                <div class="md-media-lg card-media"></div>
+                            </md-card-title-media>
+                        </md-card-title>
+                        <md-card-actions layout="row" layout-align="end center">
+                            <md-button>Action 1</md-button>
+                            <md-button>Action 2</md-button>
+                        </md-card-actions>
+                    </md-card>
+            </md-content>
+        </md-content>
 
     </div>
 
@@ -38,7 +66,7 @@
     <script src="angular-messages/angular-messages.min.js"></script>
     <script src="angular-material/angular-material.min.js"></script>
 
-    <script src="app.js"></script>    
+    <script src="build.min.js"></script>    
 
 </body>
 </html>
