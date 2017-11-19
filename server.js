@@ -10,13 +10,13 @@ app.engine('html', render);
 app.set('views', __dirname);
 app.set('view engine', 'html');
 
-app.use(express.static(path.join(__dirname, 'node_modules')));
-app.use(express.static(path.join(__dirname, 'assets')));
-app.use(express.static(path.join(__dirname, 'dist')));
+app.use(express.static('node_modules'));
+app.use(express.static('dist'));
+app.use(express.static('assets'));
+app.use(express.static('app'));
 
 router.get('/', (req, res, next) => res.render('index'));
-app.use('/', router);
 
-app.use((req, res, next) => res.render('404'));
+app.use('/', router);
 
 module.exports = app;

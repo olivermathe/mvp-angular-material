@@ -5,7 +5,7 @@ const ngAnnotate = require('gulp-ng-annotate');
 const uglify = require('gulp-uglify');
 const exec = require('gulp-exec');
 
-const SRC_CODE = ['./app/**/*.js', './app/**/**/*.js', './app/shared/factories/*.js', './app/shared/directives/**/*.js', './app/shared/services/*.js', './app/shared/**/*.js']
+const SRC_CODE = ['./app/app.module.js', './app/*.js', './app/shared/**/*.js', './app/pages/**/*.js'];
 
 gulp.task('default', ['execute']);
 
@@ -30,5 +30,5 @@ gulp.task('build:min', ['build:bundle'], () => {
 
 gulp.task('execute', ['build:min'], () => {
     gulp.src('./')
-        .pipe(exec('node ./bin/www'))
+        .pipe(exec('node ./bin/www.js'))
 });

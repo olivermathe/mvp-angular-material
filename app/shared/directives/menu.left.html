@@ -1,0 +1,20 @@
+<md-sidenav class="md-sidenav-left" md-colors="{background: '{{color}}'}" md-component-id="{{selfId}}">
+        
+    <md-toolbar class="md-whiteframe-4dp">
+        <div class="md-toolbar-tools">
+            <h1 flex md-truncate class="md-toolbar-tools">Sidenav</h1>
+            <md-button aria-label="menu" class="md-icon-button" ng-click="close(selfId)">
+                <md-icon md-svg-src="icons/arrow_back_white_48px.svg" aria-label="back"></md-icon>
+            </md-button>
+        </div>
+    </md-toolbar>
+
+    <md-content>
+        <md-list flex>
+            <md-list-item ng-repeat="option in options" ng-click="select(option.url)" md-colors="{background: '{{color}}'}">
+                <p>{{option.name}}</p>
+            </md-list-item>
+        </md-list>
+    </md-content>
+    
+</md-sidenav>

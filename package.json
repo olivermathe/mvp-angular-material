@@ -1,6 +1,6 @@
 {
   "name": "mvp-angular-material",
-  "version": "0.0.0",
+  "version": "2.0.0",
   "private": true,
   "scripts": {
     "start": "gulp"
@@ -11,6 +11,7 @@
     "angular-aria": "^1.6.6",
     "angular-material": "^1.1.5",
     "angular-messages": "^1.6.6",
+    "angular-route": "^1.6.6",
     "ejs": "~2.5.7",
     "express": "~4.15.5",
     "gulp": "^3.9.1",
