@@ -1,9 +1,24 @@
 (function (){
     'use strict';
 
-    function constructor () {
+    function constructor ($compile) {
 
-        function link (component, element, attrs) {
+        function link (scope, element, attrs) {
+
+            scope.lastTagPage = '';
+
+            scope.$on('CHANGE_TOOLS', function (event, tools) {
+
+                var divTools = element.find('md-toolbar').find('div').eq(0);
+                var tag = '<'+tools+'></'+tools+'>';
+
+                divTools.find(scope.lastTagPage).remove();
+
+                divTools.append($compile(tag)(scope));
+
+                scope.lastTagPage = tools;
+                
+            });
 
         };
 

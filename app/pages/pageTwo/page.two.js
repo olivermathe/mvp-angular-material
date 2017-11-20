@@ -1,17 +1,17 @@
 (function () {
     'use strict';
 
-    function pageTwoController ($scope) {
+    function pageTwoController ($scope, $rootScope) {
 
         (function () {
 
-
+            $rootScope.$broadcast('CHANGE_TOOLS', 'page-two-tools');
 
         })();
 
     };
 
-    pageTwoController.$inject = ['$scope'];
+    pageTwoController.$inject = ['$scope', '$rootScope'];
 
     angular.module('app').controller('pageTwoController', pageTwoController);
 

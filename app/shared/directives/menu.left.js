@@ -12,8 +12,11 @@
             };
 
             scope.select = function (path) {
+
                 $location.path(path);
+
                 scope.close(scope.selfId);
+
             };
 
             document.onmousemove = function (event) {

@@ -5,7 +5,7 @@
 
         $mdThemingProvider.theme('default')
             .primaryPalette('deep-purple')
-            .accentPalette('purple')
+            .accentPalette('amber')
             .warnPalette('red')
             .backgroundPalette('grey');
 
