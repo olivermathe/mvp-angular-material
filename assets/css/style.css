@@ -1,0 +1,59 @@
+body {
+    background-image: url('imagens/fundo.png');  
+    /*background-repeat: no-repeat;
+    background-size:100%;
+    bottom: 0;*/
+}
+
+#navegacao {
+    /*background: #fff;*/
+    /*height: auto;
+    position: fixed;
+    /*width: 100%;
+    top: 0;
+    height: 45px;
+    border-bottom: 1px solid #d8d8d8;*/
+}
+
+#logo {
+    /*float: left;*/
+    right: 20px;
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-bottom: 10px;*/
+}
+
+#menu {
+    float: right;
+    /*text-align: right;
+    padding-top: 20px;
+    /*-padding-right: 40px;*/
+    font-family: ubuntu;
+    font-weight: bold;
+    /*padding: 10px 0;*/
+}
+
+a {
+    text-decoration: none;
+    padding: 5px 10px;
+}
+/*Links não visitados*/
+a:link {
+    color: #ffffff; /*#838383;  CINZA*/
+}
+
+/*Links vistados*/
+a:visited {
+    color: #ffffff;
+}
+
+/*Links hover*/
+a:hover {
+    color: #fff;
+    background: #7bc69f;       /*b9c941; o outro verde*/
+}
+
+/*Links active*/
+a:active {
+    color: #535353;
+}

@@ -1,8 +1,124 @@
-menu-left, 
-menu-left.md-locked-open, 
-menu-left.md-closed.md-locked-open-add-active {
-    min-width: 200px !important;
-    width: 70vw !important;
-    max-width: 300px !important;
+body{
+    background-image: url('imagens/fundo.png');  
+    background-repeat: no-repeat;
+    background-size:100%;
+    bottom: 0;
 }
 
+/* CABEÇALHO */
+
+#navegacao {
+    /*background: #fff;*/
+    height: auto;
+    position: fixed;
+    width: 100%;
+    /*
+    top: 0;*/
+    height: 60px;
+    border-bottom: 1px solid #d8d8d8;
+}
+
+#logo {
+    float: left;
+    right: 20px;
+    padding-top: 5px;
+    padding-left: 10px;
+    padding-bottom: 10px;
+}
+
+#menu {
+    float: right;
+    padding-top: 20px;
+    padding-right: 40px;
+    font-family: ubuntu;
+    font-weight: bold;
+    /*padding: 10px 0;*/
+}
+
+a {
+    text-decoration: none;
+    padding: 5px 10px;
+}
+/*Links não visitados*/
+a:link {
+    color: #ffffff; /*#838383;  CINZA*/
+}
+
+/*Links vistados*/
+a:visited {
+    color: #ffffff;
+}
+
+/*Links hover*/
+a:hover {
+    color: #fff;
+    background: #7bc69f;       /*b9c941; o outro verde*/
+}
+
+/*Links active*/
+a:active {
+    color: #535353;
+}
+
+/* FIM CABEÇALHO */
+
+.texto{
+    height: 40px;
+    padding-top: 100px;
+    color: #fff;
+    font-family: ubuntu;
+    text-align: center;
+}
+
+.form{
+    float: left;
+    text-align: right;
+
+}
+
+h1{
+    text-align: center;
+}
+
+#todoform {
+padding-left: 20px;
+text-align: center;
+
+/*background:#4f4f4f; */
+/* cor escura para o fundo do formulário */
+
+font:12px ubuntu, arial, verdana, helvetica, sans-serif; 
+/* o tamanho e o tipo da fonte no formulário */
+font-weight: bold;
+
+/*
+border-top:4px solid #cfcfcf;
+/* borda superior de 8px solida na cor cinza clara 
+no formulário */
+/*
+border-left:4px solid #cfcfcf;
+/* a borda esquerda do formulário */
+/*
+border-right:4px solid #696969; 
+/* a borda direita do formulário */
+/*
+border-bottom:4px solid #696969; 
+* a borda inferior do formulário */ 
+
+/*border-collapse:collapse; */
+/* retira as bordas duplas nas células da tabela */
+
+color:#fff; /* a cor laranja para as letras */
+      }
+
+.imagem{
+    /*height: 90px;*/
+    padding-top: 50px;
+    padding-left: 100px;
+}
+
+.imagem2{
+    height: 5px;
+    padding-top: 0px;
+    padding-left: 10px;
+}
